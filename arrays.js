@@ -1,15 +1,44 @@
-const strings = ["a", "b", "c", "d"];
+class MyArray {
+    constructor() {
+        this.length = 0;
+        this.data = {};
+    }
 
-// push: insert an element at the last index
-strings.push("e"); // O(1)
+    get(index) {
+        return this.data[index];
+    }
 
-// pop: delete the last item in array
-strings.pop(); // O(1)
+    push(value) {
+        this.data[this.length] = value;
+        this.length++;
+        return this.length
+    }
 
-// unshift: insert element at first index of array
-strings.unshift("x"); // O(n)
+    pop() {
+        const lastItem = this.data[this.length - 1];
+        delete this.data[this.length - 1];
+        this.length--;
+        return lastItem;
+    }
 
-// splice: insert element on desired position, also deletes and return deleted elements
-strings.splice(2, 0, "alien"); // O(n)
+    delete(index) {
+        const item = this.data[index];
+        this.shiftItems(index);
+        return item;
+    }
 
-console.log(strings);
+    shiftItems(index) {
+        for (let i = index; i < this.length-1; i++) {
+            this.data[i] = this.data[i + 1];
+        }
+        this.pop();
+    }
+}
+
+const newArray = new MyArray();
+newArray.push("Hi");
+newArray.push("Hey");
+newArray.push("!!!");
+// newArray.pop();
+newArray.delete(1);
+console.log(newArray);
