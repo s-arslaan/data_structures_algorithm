@@ -9,4 +9,7 @@ Mind Map for DSA practice: https://coggle.it/diagram/W5E5tqYlrXvFJPsq/t/master-t
 ### Time / Space Complexity
 ![Time and Space Complexity](images/big_O_dsa.jpg)
 ### Big O for Sorting Algorithms
-![Time and Space Complexity](images/big_O_sorting_algos.jpg)
+![Big O for Sorting Algorithms](images/big_O_sorting_algos.jpg)
+
+### Data Structures in Different Languages
+![Data Structures in Different Languages](images/datastructures_lang_chart.png)
